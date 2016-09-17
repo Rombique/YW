@@ -7,12 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
     <Window.Resources>
-        <local:dbDataSet x:Key="dbDataSet"/>
+
    
-        <CollectionViewSource x:Key="tableViewSource" Source="{Binding Table, Source={StaticResource dbDataSet}}"/>
+    
     </Window.Resources>
     
-    <Grid Margin="0,0,2,0" DataContext="{StaticResource tableViewSource}">
+    <Grid Margin="0,0,2,0" DataContext="">
         <Grid.RowDefinitions>
             <RowDefinition Height="5*"/>
             <RowDefinition Height="1*"/>
@@ -31,7 +31,7 @@
                 <Button x:Name="exchangeVRNButton" Content="Курсы Воронежа" HorizontalAlignment="Left" Margin="6,70,0,0" VerticalAlignment="Top" Width="109"/>
             </Grid>
         </GroupBox>
-        <DataGrid x:Name="dataGrid" Margin="10,10,0,0" ItemsSource="{Binding}" HorizontalContentAlignment="Center">
+        <DataGrid x:Name="dataGrid" Margin="10,10,0,0" ItemsSource="" HorizontalContentAlignment="Center" AutoGenerateColumns="True">
             
         </DataGrid>
 
